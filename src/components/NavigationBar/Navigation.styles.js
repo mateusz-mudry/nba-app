@@ -21,6 +21,7 @@ export const NavigationUl = styled.div`
   width: 736px;
   font-size: 14px;
   font-weight: 600;
+  cursor: pointer;
 `;
 
 export const NavigationBarLogo = styled.img`
@@ -41,6 +42,7 @@ export const NavBarStoreUl = styled.div`
   justify-content: space-around;
   font-weight: 600;
   padding: 0 8px;
+  cursor: pointer;
 `;
 
 export const LeaguePassButton = styled.button`
