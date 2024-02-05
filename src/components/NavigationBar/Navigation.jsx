@@ -9,6 +9,11 @@ import { NavBarStoreUl } from "./Navigation.styles"
 import { NavigationMenu } from "./Navigation.styles"
 import { MobileMenu } from "./Navigation.styles"
 import { MobileMenuIcon } from "./Navigation.styles"
+import { PlayersButton } from "./Navigation.styles"
+import { TeamsButton } from "./Navigation.styles"
+import { StandingsButton } from "./Navigation.styles"
+import { GamesButton } from "./Navigation.styles"
+import { NewsButton } from "./Navigation.styles"
 
 export const Navigation = () => {
     return (
@@ -21,22 +26,32 @@ export const Navigation = () => {
                 <NavigationBarLogo src={require('../../images/nba-logo.png')} />
                 </div>
                 <NavigationMenu>
-                    <NavigationUl>Menu</NavigationUl>
                     {/* <NavigationUl>
                         <div>News</div>
                         <div>Games</div>
                         <div>Standings</div>
                         <div>Teams</div>
                         <div>Players</div>
+                        <LeaguePassButton>League Pass</LeaguePassButton>
+                        <NavBarStore>
+                        <div>Store</div>
+                        <div>Tickets</div>
+                        </NavBarStore>
                     </NavigationUl> */}
-                    {/* <NavBarStore>
+                    <NavigationUl>
+                        <NewsButton>News</NewsButton>
+                        <GamesButton>Games</GamesButton>
+                        <StandingsButton>Standings</StandingsButton>
+                        <TeamsButton>Teams</TeamsButton>
+                        <PlayersButton>Players</PlayersButton>
+                    </NavigationUl>
+                    <NavBarStore>
                         <LeaguePassButton>League Pass</LeaguePassButton>
                             <NavBarStoreUl>
                                 <div>Store</div>
                                 <div>Tickets</div>
                             </NavBarStoreUl>
-                        <div>Sign In</div>
-                    </NavBarStore> */}
+                    </NavBarStore>
                     <div>Sign In</div>
                 </NavigationMenu>
             </NavigationBarDiv>
