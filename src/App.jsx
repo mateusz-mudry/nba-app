@@ -1,9 +1,11 @@
 // import "./App.css";
 import React from "react";
-import { Navigation } from "./components/NavigationBar/Navigation";
-import { Boxscore } from "./components/BoxscoreBar/Boxscore";
-import { FetchPlayers } from "./components/FetchData/FetchPlayers";
+// import { Navigation } from "./components/NavigationBar/Navigation";
+// import { Boxscore } from "./components/BoxscoreBar/Boxscore";
+// import { FetchPlayers } from "./components/FetchData/FetchPlayers";
 // import { PhotoSlider } from "./components/PhotoSlider/PhotoSlider";
+import { AppRouter } from "./routing/AppRoutes";
+import { BrowserRouter } from 'react-router-dom'
 
 // const config =  [
 //   {
@@ -19,9 +21,12 @@ import { FetchPlayers } from "./components/FetchData/FetchPlayers";
 function App() {
   return (
     <div className="App">
-      <Navigation></Navigation>
-      <Boxscore></Boxscore>
-      <FetchPlayers></FetchPlayers>
+      <BrowserRouter>
+        <AppRouter></AppRouter>
+      </BrowserRouter>
+      {/* <Navigation></Navigation> */}
+      {/* <Boxscore></Boxscore> */}
+      {/* <FetchPlayers></FetchPlayers> */}
       {/* <PhotoSlider config={config}></PhotoSlider> */}
     </div>
   );

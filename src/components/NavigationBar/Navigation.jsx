@@ -14,6 +14,7 @@ import { TeamsButton } from "./Navigation.styles"
 import { StandingsButton } from "./Navigation.styles"
 import { GamesButton } from "./Navigation.styles"
 import { NewsButton } from "./Navigation.styles"
+import { NavLink } from "react-router-dom";
 
 export const Navigation = () => {
     return (
@@ -26,24 +27,27 @@ export const Navigation = () => {
                 <NavigationBarLogo src={require('../../images/nba-logo.png')} />
                 </div>
                 <NavigationMenu>
-                    {/* <NavigationUl>
-                        <div>News</div>
-                        <div>Games</div>
-                        <div>Standings</div>
-                        <div>Teams</div>
-                        <div>Players</div>
-                        <LeaguePassButton>League Pass</LeaguePassButton>
-                        <NavBarStore>
-                        <div>Store</div>
-                        <div>Tickets</div>
-                        </NavBarStore>
-                    </NavigationUl> */}
                     <NavigationUl>
-                        <NewsButton>News</NewsButton>
-                        <GamesButton>Games</GamesButton>
+                        <NavLink to="/news" className="nav-link" activeClassName="active">
+                        News
+                        </NavLink>
+                        <NavLink to="/games" className="nav-link" activeClassName="active">
+                        Games
+                        </NavLink>
+                        <NavLink to="/teams" className="nav-link" activeClassName="active">
+                        Teams
+                        </NavLink>
+                        <NavLink to="/players" className="nav-link" activeClassName="active">
+                        Players
+                        </NavLink>
+                        <NavLink to="/stats" className="nav-link" activeClassName="active">
+                        Stats
+                        </NavLink>
+                        {/* <NewsButton to='/news'>News</NewsButton>
+                        <GamesButton to='/games'>Games</GamesButton>
                         <StandingsButton>Standings</StandingsButton>
-                        <TeamsButton>Teams</TeamsButton>
-                        <PlayersButton>Players</PlayersButton>
+                        <TeamsButton to='/teams'>Teams</TeamsButton>
+                        <PlayersButton to='/players'>Players</PlayersButton> */}
                     </NavigationUl>
                     <NavBarStore>
                         <LeaguePassButton>League Pass</LeaguePassButton>
