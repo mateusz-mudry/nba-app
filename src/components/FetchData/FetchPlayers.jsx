@@ -17,21 +17,10 @@ export const FetchPlayers = () => {
             {players.data.map((d) => (
                 <div key={d.id}>
                     <h2>{d.first_name} {d.last_name}</h2>
+                    <p>Height: {d.height_feet}'{d.height_inches}</p>
+                    <p>Team: {d.team.full_name}</p>
                 </div>
             ))}
         </div>
       );
 };
-
-{/* <div>
-<h1 className='title'>NBA Players</h1>
-{players.data.map((player) => (
-  <div key={player.id} className="card">
-    <h2>{player.first_name} {player.last_name}</h2>
-    <p>Position: {player.position}</p>
-    <p>Height: {player.height_feet}'{player.height_inches}</p>
-    <p>Weight: {player.weight_pounds} lbs</p>
-    <p>Team: {player.team.full_name}</p>
-  </div>
-))}
-</div> */}

@@ -11,7 +11,7 @@ import { MobileMenu } from "./Navigation.styles"
 import { MobileMenuIcon } from "./Navigation.styles"
 import { PlayersButton } from "./Navigation.styles"
 import { TeamsButton } from "./Navigation.styles"
-import { StandingsButton } from "./Navigation.styles"
+import { StatsButton } from "./Navigation.styles"
 import { GamesButton } from "./Navigation.styles"
 import { NewsButton } from "./Navigation.styles"
 import { NavLink } from "react-router-dom";
@@ -24,30 +24,37 @@ export const Navigation = () => {
                     <MobileMenuIcon src={require('../../images/menu-icon.png')}></MobileMenuIcon>
                 </MobileMenu>
                 <div>
+                <NavLink to="/">
                 <NavigationBarLogo src={require('../../images/nba-logo.png')} />
+                </NavLink>
                 </div>
                 <NavigationMenu>
                     <NavigationUl>
+                        <NewsButton to='/news'>
                         <NavLink to="/news" className="nav-link" activeClassName="active">
                         News
                         </NavLink>
-                        <NavLink to="/games" className="nav-link" activeClassName="active">
-                        Games
-                        </NavLink>
-                        <NavLink to="/teams" className="nav-link" activeClassName="active">
-                        Teams
-                        </NavLink>
-                        <NavLink to="/players" className="nav-link" activeClassName="active">
-                        Players
-                        </NavLink>
+                        </NewsButton>
+                        <GamesButton to='/games'>
+                            <NavLink to="/games" className="nav-link" activeClassName="active">
+                            Games
+                            </NavLink>
+                        </GamesButton>
+                        <StatsButton>
                         <NavLink to="/stats" className="nav-link" activeClassName="active">
                         Stats
                         </NavLink>
-                        {/* <NewsButton to='/news'>News</NewsButton>
-                        <GamesButton to='/games'>Games</GamesButton>
-                        <StandingsButton>Standings</StandingsButton>
-                        <TeamsButton to='/teams'>Teams</TeamsButton>
-                        <PlayersButton to='/players'>Players</PlayersButton> */}
+                        </StatsButton>
+                        <TeamsButton to='/teams'>
+                            <NavLink to="/teams" className="nav-link" activeClassName="active">
+                            Teams
+                            </NavLink>
+                        </TeamsButton>
+                        <PlayersButton to='/players'>
+                        <NavLink to="/players" className="nav-link" activeClassName="active">
+                        Players
+                        </NavLink>
+                        </PlayersButton>
                     </NavigationUl>
                     <NavBarStore>
                         <LeaguePassButton>League Pass</LeaguePassButton>

@@ -6,6 +6,7 @@ import React from "react";
 // import { PhotoSlider } from "./components/PhotoSlider/PhotoSlider";
 import { AppRouter } from "./routing/AppRoutes";
 import { BrowserRouter } from 'react-router-dom'
+import { Navigation } from "./components/NavigationBar/Navigation";
 
 // const config =  [
 //   {
@@ -22,6 +23,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Navigation></Navigation>
         <AppRouter></AppRouter>
       </BrowserRouter>
       {/* <Navigation></Navigation> */}

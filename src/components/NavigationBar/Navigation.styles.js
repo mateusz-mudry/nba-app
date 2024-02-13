@@ -114,7 +114,7 @@ export const NavigationMenu = styled.div`
   } */
 `;
 
-export const PlayersButton = styled.button`
+export const PlayersButton = styled.div`
   display: flex;
   justify-content: center;
   width: 150px;
@@ -124,7 +124,7 @@ export const PlayersButton = styled.button`
   }
 `;
 
-export const TeamsButton = styled.button`
+export const TeamsButton = styled.div`
   display: flex;
   justify-content: center;
   width: 150px;
@@ -134,7 +134,7 @@ export const TeamsButton = styled.button`
   }
 `;
 
-export const StandingsButton = styled.button`
+export const StatsButton = styled.div`
   display: flex;
   justify-content: center;
   width: 150px;
@@ -144,7 +144,7 @@ export const StandingsButton = styled.button`
   }
 `;
 
-export const GamesButton = styled.button`
+export const GamesButton = styled.div`
   display: flex;
   justify-content: center;
   width: 150px;
@@ -154,7 +154,7 @@ export const GamesButton = styled.button`
   }
 `;
 
-export const NewsButton = styled.button`
+export const NewsButton = styled.div`
   display: flex;
   justify-content: center;
   width: 150px;
